@@ -8,15 +8,22 @@ $nomeFilme = "Interestelar";
 $nomeFilme = "O Rei Leão";
 
 
-$anoLancamento = $argv[1] ?? 2022;
-$somaDeNotas = 8.8;
-$somaDeNotas += 7.5;
-$somaDeNotas += 9;
-$somaDeNotas += 8.5;
-$somaDeNotas += 6;
+$anoLancamento = 2022;
+$somaDeNotas = 0;
+
+// $somaDeNotas += $argv[1];
+// $somaDeNotas += $argv[2];
+// $somaDeNotas += $argv[3];
+
+for($contador = 1; $contador < $argc; $contador += 1) {
+    $somaDeNotas += $argv[$contador];
+}
 
 
-$notaFilme = $somaDeNotas / 5;
+
+$quantidadeDeNotas = $argc - 1;
+
+$notaFilme = $somaDeNotas / $quantidadeDeNotas;
 $incluidoNoPlano = true;
 
 echo "O filme $nomeFilme foi lançado em $anoLancamento e tem uma nota de $notaFilme\n";
