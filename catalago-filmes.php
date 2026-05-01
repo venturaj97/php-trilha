@@ -15,7 +15,7 @@ $somaDeNotas = 0;
 // $somaDeNotas += $argv[2];
 // $somaDeNotas += $argv[3];
 
-for($contador = 1; $contador < $argc; $contador += 1) {
+for($contador = 1; $contador < $argc; $contador ++) {
     $somaDeNotas += $argv[$contador];
 }
 
